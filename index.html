@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap and external css stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>DOM Manipulation with Forms</title>
+</head>
+
+<body>
+  <form id="form">
+    <h1 id="title">Forms with DOM</h1>
+    <p id="description">
+      <span id="des_short">Short Discription:</span>
+      <br>
+      This is a form created using HTML, CSS, Bootstrap and JavaScript. The form is used to takes user data
+      such as first name, last name, address, pincode, their gender, choice of food, state and country of residence.
+      <br>
+      <br>
+      The form takes in the inputed data and forms a table data filled with the data inputed from the user using javascript.
+    </p>
+    <span class="form_topic">Fill This Form</span>
+    <!-- Creating the form -->
+    <div class="form-group">
+
+      <!-- Creating input field for first name -->
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" class="f_name" placeholder="Enter your first name" required>
+      <br>
+
+      <!-- Creating input field for last name -->
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" class="l_name" placeholder="Enter your last name" required>
+      <br>
+
+      <!-- Creating input field for address -->
+      <label for="address">Address:</label>
+      <textarea name="address" id="address" cols="15" rows="5" placeholder="Enter your address" required></textarea>
+      <br>
+
+      <!-- Creating input field for pincode -->
+      <label for="pincode">Pincode:</label>
+      <input type="text" id="pincode" class="pin" placeholder="Enter your pincode" required>
+      <br>
+
+      <!-- Creating input field for gender -->
+      <label id="gender">Gender:</label>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label for="GenderMale">Male</label>
+          </div>
+          <div class="col">
+            <input type="radio" name="gender" value="male" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label for="GenderFemale">Female</label>
+          </div>
+          <div class="col">
+            <input type="radio" name="gender" value="female" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creating input field for food preference -->
+      <label>Choice of Food (Select at least 2):</label>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label for="food">Burger</label>
+          </div>
+          <div class="col">
+            <input type="checkbox" name="food" value="burger">
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label for="food">Salad</label>
+          </div>
+          <div class="col">
+            <input type="checkbox" name="food" value="salad">
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label for="food">Pizza</label>
+          </div>
+          <div class="col">
+            <input type="checkbox" name="food" value="pizza">
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label for="food">Pasta</label>
+          </div>
+          <div class="col">
+            <input type="checkbox" name="food" value="pasta">
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label for="food">Ice Cream</label>
+          </div>
+          <div class="col">
+            <input type="checkbox" name="food" value="icecream">
+          </div>
+        </div>
+      </div>
+
+      <!-- Creating input field for state -->
+      <label for="state">State:</label>
+      <input type="text" id="state" class="st" placeholder="Enter your state" required>
+      <br>
+
+      <!-- Creting input field for country -->
+      <label for="country">Country:</label>
+      <input type="text" id="country" class="cont" placeholder="Enter your country" required>
+      <br>
+      <!-- Creating a button for submitting the document -->
+      <button type="submit" id="submit" class="btn btn-primary">
+        Submit
+      </button>
+    </div>
+  </form>
+
+        <!-- Creating a table to output the data the user has inputted -->
+  <table id="dataTable" class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Pincode</th>
+        <th>Gender</th>
+        <th>Food</th>
+        <th>State</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+
+    <tbody class="table">
+      <!-- Table rows will be added using JavaScript -->
+    </tbody>
+  </table>
+
+  <!-- External javascript files link -->
+  <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
